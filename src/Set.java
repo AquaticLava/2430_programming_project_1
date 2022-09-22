@@ -5,8 +5,17 @@
  * (the symmetric difference of A and B defined as (A – B) ∪ (B – A)
  */
 public class Set {
-    public boolean[] notSet(boolean[] set){
-        return null;//TODO
+	
+	/*
+	 * returns the inverse of the set 
+	 * e.g. [T T F] -> [F F T]
+	 */
+    public static boolean[] notSet(boolean[] set){
+   	 boolean[] returnedSet = set.clone();
+   	 for (int i = 0; i < returnedSet.length; i++) {
+   		 returnedSet[i] = !returnedSet[i];
+   	 }
+        return returnedSet;
     }
 
     public boolean[] orSets(boolean[] setA, boolean[] setB){
