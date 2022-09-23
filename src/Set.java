@@ -19,11 +19,31 @@ public class Set {
     }
 
     public boolean[] orSets(boolean[] setA, boolean[] setB){
-        return null;//TODO
+        if (setA.length != setB.length){
+            throw new IllegalArgumentException("Sets must be the same length");
+        }
+
+        boolean[] outputSet = new boolean[setA.length];
+
+        for (int i = 0; i < setA.length; i++) {
+            outputSet[i] = setA[i] | setB[i];
+        }
+
+        return outputSet;//TODO add comments
     }
 
     public boolean[] andSets(boolean[] setA, boolean[] setB){
-        return null; //TODO
+        if (setA.length != setB.length){
+            throw new IllegalArgumentException("Sets must be the same length");
+        }
+
+        boolean[] outputSet = new boolean[setA.length];
+
+        for (int i = 0; i < setA.length; i++) {
+            outputSet[i] = setA[i] & setB[i];
+        }
+
+        return outputSet;//TODO add comments
     }
 
     public boolean[] subtractSets(boolean[] setA, boolean[] setB){
